@@ -1,0 +1,130 @@
+/* styles.css */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #282c34;
+    color: #61dafb;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background-color: #20232a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 320px;
+}
+
+.cell {
+    width: 100%;
+    padding-top: 100%; 
+    position: relative;
+    background-color: #fff;
+    border: 2px solid #060606;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    color: #fff;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden; 
+}
+
+.cell[data-index="0"] {
+    background-image: url('1.jpg');
+}
+
+.cell[data-index="1"] {
+    background-image: url('2.jpg');
+}
+
+.cell[data-index="2"] {
+    background-image: url('3.jpg');
+}
+
+.cell[data-index="3"] {
+    background-image: url('4.jpg');
+}
+
+.cell[data-index="4"] {
+    background-image: url('5.jpg');
+}
+
+.cell[data-index="5"] {
+    background-image: url('6.jpg');
+}
+
+.cell[data-index="6"] {
+    background-image: url('7.jpg');
+}
+
+.cell[data-index="7"] {
+    background-image: url('8.jpg');
+}
+
+.cell[data-index="8"] {
+    background-image: url('9.jpg');
+}
+
+.cell:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.cell span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #f90808;
+}
+
+#resetButton {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #61dafb;
+    color: #20232a;
+    transition: background-color 0.3s;
+}
+
+#resetButton:hover {
+    background-color: #21a1f1;
+}
+
+#message {
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+    .cell {
+        font-size: 2em;
+    }
+}
